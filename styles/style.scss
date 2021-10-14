@@ -1,0 +1,366 @@
+@import 'variables';
+@import 'globalStyle';
+
+header{
+    background-image:url('../images/desktop//image-hero.jpg');
+    height:40.625rem;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    color:#fff;
+    &.open{
+        background:#000;
+    }
+    .nav{
+        padding:2.5rem 0;
+        display:flex;
+        justify-content:space-between;
+        align-items:center; 
+        &.open{
+            height:100vh;
+            align-items:flex-start;
+            width:100vw;
+        }
+        ul{
+            display:none;
+        }
+        ul.open{
+            display:block;
+            position:absolute;
+            top:13.125rem;
+            left:1.625rem;
+
+           li{
+               margin-bottom:1.5rem;
+               a{
+                   color:#fff;
+                   font-size:1.5rem;
+                   font-weight:1.5625rem;
+                   font-weight:300;
+                   font-family:$font-heading;
+                   text-transform:uppercase;
+               }
+           }
+        }
+        .close-icon{
+            display:none;
+        }
+    }
+    .title{
+        width:20.4375rem;
+        height:12.25rem;
+        margin-top:7.5rem;
+        border:1px solid #fff;
+        h1{
+            padding:0 1.75rem;
+            font-size:2.5rem;
+            line-height:2.375rem;
+        }
+    }
+}
+
+.interactive{
+    margin-top:6.25rem;
+    text-align:center;
+    .interactive-text{
+        margin-top:2.5rem;
+        h2{
+            font-size:2rem;
+            line-height:2rem;
+            margin-bottom:0;
+        }
+        p{
+           font-size:0.9375rem;
+           line-height:1.5625rem;
+           padding:0 1rem; 
+           color:$clr-very-dark-gray;
+        }
+    }
+}
+
+.creations{
+    text-align:center;
+    margin-top:6.25rem;
+    .creations-title{
+        h3{
+            font-size:2rem;
+            line-height:2rem;
+        }
+        .desktop-btn{
+            display:none;
+        }
+    }
+    .images-grid{
+        margin-top:3rem;
+        display:grid;
+        grid-template-columns: repeat(1fr);
+        grid-gap:1.2rem;
+        .images-card{
+            position:relative;
+            cursor:pointer;
+            &:hover{
+                opacity:0.5;
+            }
+            img{
+                height:7.5rem;
+            }
+            h4{
+                margin:0;
+                padding:0;
+                text-align:left;
+                color:#fff;
+                position:absolute;
+                bottom:1.625rem;
+                left:1.5rem;
+                font-size:1.5rem;
+                line-height:1.5rem;
+                width:9.375rem;
+            }
+            &:nth-child(1){
+                h4{width:80px;}
+            }
+        }
+    }
+}
+.mobile-btn{
+    margin-top:2rem;
+    padding:0.6rem 2.2rem;
+    font-size:0.875rem;
+    line-height:0.875rem;
+    letter-spacing:0.3125rem;
+    font-family:inherit;
+    background: transparent;
+    cursor:pointer;
+    &:hover{
+        background:#000;
+        color:#fff;
+    }
+}
+
+footer{
+    background:$clr-black;
+    margin-top:6rem;
+    text-align:center;
+    padding-bottom:3.75rem;
+    .logo-info{
+        padding-top:3.75rem;
+        margin-bottom:3rem;
+        ul{
+            margin-top:1.5rem;
+            li{
+                margin-bottom:1.1rem;
+                a{
+                    color:#fff;
+                    font-size:0.9375rem;
+                    line-height:1.5625rem;
+                    cursor:pointer;
+                    &:hover{
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+    .social-copyright{
+        ul{
+            display:flex;
+            justify-content: center;
+            gap:1rem;
+            li{
+                a{
+                   cursor:pointer;
+                   &:hover{
+                       border-bottom:1px solid #fff;
+                   }
+                }
+            }
+        }
+        p{
+            color:$clr-dark-gray;
+            font-size:0.9375rem;
+            line-height:1.5625rem;
+        }
+    }
+}
+
+@media(min-width:1400px){
+    body{
+        max-width:1440px;
+        width:100%;
+        margin:0 auto;
+    }
+    .container{
+        max-width:1111px;
+        width:100%;
+    }
+
+    .logo{
+        width:12rem;
+        height:2rem;
+    }
+
+    header{
+        .nav{
+            padding:3.4375rem 0;
+            ul{
+                display:flex;
+                gap:2rem;
+                li{
+                    a{
+                        color:#fff;
+                        font-size:0.9375rem;
+                        line-height:1.5625rem;
+                        &:hover{
+                            border-bottom:1px solid #fff;
+                        }
+                    }
+                }
+            }
+            .close-icon{
+                display:none;
+            }
+            .open-icon{
+                display:none;
+            }
+        }
+        .title{
+            width:40.625rem;
+            height:17.375rem;
+            margin-top:3.4375rem;
+            margin-left:10rem;
+            padding:0 2.5rem;
+            h1{
+                padding:0;
+                text-align: left;
+                font-size:4.5rem;
+                line-height:4.375rem;
+            }
+        }
+    }
+    .interactive{
+        margin-top:9.375rem;
+        display:flex;
+        position:relative;
+        .interactive-img{
+            picture{
+            width:45.6875rem;
+            height:31.25rem; 
+            }
+             
+        }
+        .interactive-text{
+            width:33.8125rem;
+            height:19.8125rem;
+            position:absolute;
+            right:0;
+            bottom:0;
+            background:#fff;
+            padding-left:1.5rem;
+            padding-top:4rem;
+            text-align:left;
+            h2{
+                font-size:3rem;
+                line-height: 3rem;
+                padding-left:4.2rem;
+            }
+            p{
+                margin-top:1.5rem;
+                font-size:0.9375rem;
+                line-height: 1.5625rem;
+                padding-left:4.2rem;
+            }
+            
+        }
+    }
+    .creations{
+        text-align:left;
+        margin-top:9.0625rem;
+        .creations-title{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            h3{
+                font-size:3rem;
+                line-height:3rem;
+            }
+            .desktop-btn{
+                background:transparent;
+                display:block;
+                padding:0.8rem 2.3rem;
+                font-size:0.875rem;
+                line-height:0.875rem;
+                letter-spacing:0.3125rem;
+                text-transform:uppercase;
+                font-family: inherit;
+                cursor:pointer;
+                border:1px solid $clr-very-dark-gray;
+                &:hover{
+                    background:#000;
+                    color:#fff;
+                }
+            }
+        }
+        .images-grid{
+            grid-template-columns: repeat(4,1fr);
+            width:1114px;
+            margin-top:2rem;
+            gap:1.875rem;
+            .images-card{
+                img{
+                    width:15.625rem;
+                    height:28.125rem;
+                }
+                h4{
+                    font-size:2rem;
+                    line-height:2rem;
+                    bottom:2.25rem;
+                    left:2.25rem;
+                }
+                &:nth-child(4){
+                    h4{width:5rem;}
+                }
+                &:nth-child(5){
+                    h4{width:12.5rem;}
+                }
+            }  
+        }
+    }
+    .mobile-btn{
+        display:none
+    }
+    footer{
+        text-align:left;
+        margin-top:11rem;
+        .container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            width:1110px;
+            height:93px;
+            padding-top:2.8125rem;
+            .logo-info{
+               padding:2.375rem 0 0;
+               margin:0;
+                .logo{
+                    width:9rem;
+                    height:1.5rem;
+                }
+                ul{
+                    display:flex;
+                    gap:2rem;
+                    margin-top:1rem;
+                }
+            }
+            .social-copyright{
+                
+                ul{
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin-right:0;
+                    
+                } 
+            }
+        }
+        
+    }
+}
